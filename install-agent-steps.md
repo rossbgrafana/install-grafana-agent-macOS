@@ -57,11 +57,15 @@ When this lab has been completed, you'll have:
 
 2.  Click on the **My Account** link at the top right of the interface to go to your the Grafana Cloud Portal Overview for your account.
 
-3.  Check the drop-down at the top left and make sure that you are in the Organization you want to enable macOS integration for Grafana Cloud in.
+3.  Check the drop-down at the top left and make sure that you are in the Organization for which you want to enable the macOS integration for Grafana Cloud.
 
 4.  Find the **Manage your Grafana Cloud Stack** text about 1/2 down the page, then find the **Grafana** grey box and click on the **Launch** button to launch your Grafana instance.
 
+![Launch button for your Grafana stack](./images/macos-graf-launch.png)
+
 5.  When the **Welcome to Grafana Cloud** page loads, go to the top left of the interface and click on the 3-line **Topic Menu** located below the Grafana logo and to the left of the **Home** text.
+
+![Launch button for your Grafana stack](./images/macos-home-conn.png)
 
 6.  Click on the **Connections** menu item and then either scroll to find the **macOS** selection, or type `macOS` into the **Search Connections** dialog near the top of the interface.
 
@@ -69,11 +73,13 @@ When this lab has been completed, you'll have:
 
 ## Making Configuration Selections
 
-1.  Under Section **2. Make configuration selections**, choose the correct **Architecture** and **Installation method** to match what you have, where `Amd64` in for Intel-type systems and `Arm64` in used for the Apple Silicon-type systems.
+1.  Under Section **2. Make configuration selections**, choose the correct **Architecture** and **Installation method** to match what you have, where `Amd64` is for Intel-type systems and `Arm64` is used for the Apple Silicon-type systems.
 
-2.  In Section **3. Prepare your agent configuration file**, check the two requirements are met, that this integration will be running alongside the Grafana Agent you installed previously.
+2.  In Section **3. Prepare your agent configuration file**, check the two requirements are met.
 
 3.  Next navigate to the **Value for Hostname** dialog box slightly lower on the page and enter the hostname you want to use to identify the host being observed.
+
+    Example:  `myhostname`
 
   **Note:** This step will automatically change the `your-instance-name` text in the two code examples to match your hostname, so you don't have to take an extra step to replace that text!
 
@@ -81,11 +87,11 @@ When this lab has been completed, you'll have:
 
   **Note:**  On a system where the Grafana Agent was installed via Homebrew, the `config.yml` file is usually found at the following location:
 
-    $ `$(brew --prefix)/etc/grafana-agent/config.yml`
+`$(brew --prefix)/etc/grafana-agent/config.yml`
 
-    Example command to edit this file:
+Example command to edit this file:
 
-    $ `sudo vim $(brew --prefix)/etc/grafana-agent/config.yml`
+$ `sudo vim $(brew --prefix)/etc/grafana-agent/config.yml`
 
 5.  Copy the example lines from the web page using the **Copy to clipboard** selection at the bottom of the example code block, then insert that into the `config.yml`` file under the `integrations` section.
 
