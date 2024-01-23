@@ -1,16 +1,10 @@
 # Installing the Grafana Agent on MacOS via Binary
 
-## Overall observations
-
-1.  I cannot recommend we use people's local machines for labs
-
-2.  This was a very very long install, over 12 minutes and dozens of updated packages, this will break any lab for change-management-controlled systems.
-
 ## Lab Summary
 
-This lab is designed to walk the user through the process of setting up a macOS system to run the Grafana Agent, sending typical metrics to a free Grafana Cloud account via the macOS integration for Grafana Cloud.
+This lab is designed to walk the user through the process of setting up the Grafana Agent on a macOS system, adding the macOS integration into a free Grafana Cloud account, and then configuring and testing the sending of metrics from the system to Grafana Cloud.  
 
-When you finish this lab, you'll have:
+##When you finish this lab, you'll have:##
  - Installed the Grafana Agent in static mode
  - Configured the Grafana Agent via the config.yml file
  - Setup the macOS integration on your Grafana Cloud stack
