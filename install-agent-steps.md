@@ -27,11 +27,11 @@ When this lab has been completed, you'll have:
 
 3. Update Homebrew with the command:
 
-    `brew upgrade`
+    $ `brew upgrade`
 
 4. Install the Grafana Agent with the command:
 
-    `brew install grafana-agent`
+    $ `brew install grafana-agent`
 
   **Note:**  If the agent is not installed, this command will install the agent, which might take a minute or two.
 
@@ -43,11 +43,11 @@ When this lab has been completed, you'll have:
 
 1.  To create a blank `config.yml` file that you can then edit to configure the Grafana Agent, use the command:
 
-    `touch $(brew --prefix)/etc/grafana-agent/config.yml`
+    $ `touch $(brew --prefix)/etc/grafana-agent/config.yml`
 
 2.  Verify your agent config file has contents with the command:
 
-    `cat $(brew --prefix)/etc/grafana-agent/config.yml`
+    $ `cat $(brew --prefix)/etc/grafana-agent/config.yml`
 
     There should be YAML data in this file.
 
@@ -81,11 +81,11 @@ When this lab has been completed, you'll have:
 
   **Note:**  On a system where the Grafana Agent was installed via Homebrew, the config.yml file is usually found at the following location:
 
-    `$(brew --prefix)/etc/grafana-agent/config.yml`
+    $ `$(brew --prefix)/etc/grafana-agent/config.yml`
 
     Example command to edit this file:
 
-    `sudo vim $(brew --prefix)/etc/grafana-agent/config.yml`
+    $ `sudo vim $(brew --prefix)/etc/grafana-agent/config.yml`
 
 5.  Copy the example lines from the web page using the **Copy to clipboard** selection at the bottom of the example code block, then insert that into the `config.yml`` file under the `integrations` section.
 
@@ -126,7 +126,7 @@ When this lab has been completed, you'll have:
    
 10.  Restart the Grafana Agent on your local system with the command:
 
-    `brew services restart grafana-agent`
+    $ `brew services restart grafana-agent`
 
 ## Test the system to Grafana integration connection
 
