@@ -20,7 +20,7 @@ When this lab has been completed, you'll have:
 
 1.  To install Homebrew, please go to the Homebrew installation page and <a href="https://brew.sh/">follow the instructions there.</a>
 
-**Note:**  Alternatively, if you've already got Homebrew installed, please continue to the next step.
+ **Note:**  Alternatively, if you've already got Homebrew installed, please continue to the next step.
 
 2. Open the Terminal App by pressing `Cmd+Spacebar` and typing `Terminal`, then press `ENTER`
 
