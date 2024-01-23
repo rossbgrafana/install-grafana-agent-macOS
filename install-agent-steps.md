@@ -16,7 +16,7 @@ When this lab has been completed, you'll have:
 
 ## Installing the Grafana Agent static mode
 
-    **Note:  To install the static agent on MacOS, you'll need to have Homebrew installed.**
+  **Note:  To install the static agent on MacOS, you'll need to have Homebrew installed.**
 
 1.  To install Homebrew, please go to the Homebrew installation page and <a href="https://brew.sh/">follow the instructions there.</a>
 
