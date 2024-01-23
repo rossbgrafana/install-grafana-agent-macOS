@@ -16,11 +16,12 @@ When this lab has been completed, you'll have:
 
 ## Installing the Grafana Agent static mode
 
-    **Note:**  To install the static agent on MacOS, you'll need to have Homebrew installed.
+
+  **Note:**  To install the static agent on MacOS, you'll need to have Homebrew installed.
 
 1.  To install Homebrew, please go to the Homebrew installation page and <a href="https://brew.sh/">follow the instructions there.</a>
 
-    **Note:**  Alternatively, if you've already got Homebrew installed, please continue to the next step.
+  **Note:**  Alternatively, if you've already got Homebrew installed, please continue to the next step.
 
 2. Open the Terminal App by pressing `Cmd+Spacebar` and typing `Terminal`, then press `ENTER`
 
@@ -32,11 +33,11 @@ When this lab has been completed, you'll have:
 
     `brew install grafana-agent`
 
-    **Note:**  If the agent is not installed, this command will install the agent, which might take a minute or two.
+  **Note:**  If the agent is not installed, this command will install the agent, which might take a minute or two.
 
 6. If the agent is already installed, but not up to date, the brew  install command will notify you of that and update the agent.
 
-    **Note:**  After the agent is installed, brew will notify you that the agent uses a `config.yml` file and will display it's location, as well as some other helpful commands.
+  **Note:**  After the agent is installed, brew will notify you that the agent uses a `config.yml` file and will display it's location, as well as some other helpful commands.
 
 ## Configuring Grafana Agent static mode
 
@@ -74,11 +75,11 @@ When this lab has been completed, you'll have:
 
 3.  Next navigate to the **Value for Hostname** dialog box slightly lower on the page and enter the hostname you want to use to identify the host being observed.
 
-    **Note:** This step will automatically change the `your-instance-name` text in the two code examples to match your hostname, so you don't have to take an extra step to replace that text!
+  **Note:** This step will automatically change the `your-instance-name` text in the two code examples to match your hostname, so you don't have to take an extra step to replace that text!
 
 4.  Next open the config.yml file on your local system with your favorite editor and then find the `integrations` section.
 
-    **Note:**  On a system where the Grafana Agent was installed via Homebrew, the config.yml file is usually found at the following location:
+  **Note:**  On a system where the Grafana Agent was installed via Homebrew, the config.yml file is usually found at the following location:
 
     `$(brew --prefix)/etc/grafana-agent/config.yml`
 
