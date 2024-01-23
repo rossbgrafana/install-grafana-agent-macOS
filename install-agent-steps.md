@@ -77,9 +77,9 @@ When this lab has been completed, you'll have:
 
   **Note:** This step will automatically change the `your-instance-name` text in the two code examples to match your hostname, so you don't have to take an extra step to replace that text!
 
-4.  Next open the config.yml file on your local system with your favorite editor and then find the `integrations` section.
+4.  Next open the `config.yml` file on your local system with your favorite editor and then find the `integrations` section.
 
-  **Note:**  On a system where the Grafana Agent was installed via Homebrew, the config.yml file is usually found at the following location:
+  **Note:**  On a system where the Grafana Agent was installed via Homebrew, the `config.yml` file is usually found at the following location:
 
     $ `$(brew --prefix)/etc/grafana-agent/config.yml`
 
