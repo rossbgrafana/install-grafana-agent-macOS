@@ -6,6 +6,18 @@
 
 2.  This was a very very long install, over 12 minutes and dozens of updated packages, this will break any lab for change-management-controlled systems.
 
+## Lab Summary
+
+This lab is designed to walk the user through the process of setting up a macOS system to run the Grafana Agent, sending typical metrics to a free Grafana Cloud account via the macOS integration for Grafana Cloud.
+
+When you finish this lab, you'll have:
+ - Installed the Grafana Agent in static mode
+ - Configured the Grafana Agent via the config.yml file
+ - Setup the macOS integration on your Grafana Cloud stack
+ - Made Configuration Selections
+ - Tested the connection between the system and Grafana Cloud
+ - Know how to view the pre-configured dashboards, alerts, and recording rules
+
 # Lab Steps
 
 ## Installing the Grafana Agent static mode
@@ -131,18 +143,26 @@
 
 8.  Now find the section that is named `logs.configs.scrape_configs` and paste the log configuration into the configuration file.
 
-9.  You can save and exit the configuration file now, and you'll have to restart the Grafana Agent on your local system with the command:
+9.  You can save and exit the configuration file now.
+   
+10.  Restart the Grafana Agent on your local system with the command:
 
     `brew services restart grafana-agent`
 
-10.  Now test your connection by navigating down to the **Test connection** section and click the blue **Test connection** button, which may take a minute to return results.
+## Test the system to Grafana integration connection
 
-11.  If your system is properly configured, you should shortly see the text:
+1.  Now test your connection by navigating down to the **Test connection** section and click the blue **Test connection** button, which may take a minute to return results.
+
+2.  If your system is properly configured, you should shortly see the text:
 
     ```
     The agent is now collecting data from your machine.
     ```
 
-12.  Next, navigate to the **Install dashboards and alerts** and click on the **Install** blue button to install the pre-configured dashboards and alerts.
+3.  Next, navigate to the **Install dashboards and alerts** and click on the **Install** blue button to install the pre-configured dashboards and alerts.
 
-13.  Lastly, you can now click on the **View Dashboards** and **View alerts and recording rules** buttons to access those features.
+## View the pre-configured dashboards and alerts and recording rules
+
+1.  Lastly, you can now click on the **View Dashboards** button to see a list of the pre-configured dashboards you just installed and start exploring your system's metrics.
+
+2.  Additionally, you can click on the **View alerts and recording rules** button to access those features.
