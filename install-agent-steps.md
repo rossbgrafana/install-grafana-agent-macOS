@@ -4,13 +4,13 @@
 
 This lab is designed to walk the user through the process of setting up the Grafana Agent on a macOS system, adding the macOS integration into a free Grafana Cloud account, and then configuring and testing the sending of metrics from the system to Grafana Cloud.  
 
-##When you finish this lab, you'll have:##
+When this lab has been completed, you'll have:
  - Installed the Grafana Agent in static mode
  - Configured the Grafana Agent via the config.yml file
  - Setup the macOS integration on your Grafana Cloud stack
- - Made Configuration Selections
+ - Made integration configuration selections
  - Tested the connection between the system and Grafana Cloud
- - Know how to view the pre-configured dashboards, alerts, and recording rules
+ - Seen how to view the pre-configured dashboards, alerts, and recording rules
 
 # Lab Steps
 
@@ -18,7 +18,7 @@ This lab is designed to walk the user through the process of setting up the Graf
 
 **Note:  To install the static agent on MacOS, you'll need to have Homebrew installed.**
 
-1.  To install Homebrew, please go to the Homebrew installation page and follow the instructions there.
+1.  To install Homebrew, please go to the Homebrew installation page and <a href="https://brew.sh/">follow the instructions there.</a>
 
 **Note:**  Alternatively, if you've already got Homebrew installed, please continue to the next step.
 
