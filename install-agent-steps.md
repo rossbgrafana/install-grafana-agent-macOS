@@ -88,7 +88,7 @@ When this lab has been completed, you'll have:
 
 5.  Copy the example lines from the web page using the **Copy to clipboard** selection at the bottom of the example code block, then insert that into the `config.yml`` file under the `integrations` section.
 
-6.  You'll need to confirm the `your-instance-name` text was replaced with your information, such as:
+6.  You'll need to confirm the `your-instance-name` text was replaced with your information (myhostname), such as:
 
 ```  node_exporter:
     enabled: true
@@ -99,12 +99,11 @@ When this lab has been completed, you'll have:
       target_label: job
     metric_relabel_configs:
     - action: keep
-      regex: node_boot_time_seconds|node_cpu_seconds_total|node_disk_io_time_seconds_total|node_disk_read_bytes_total|node_disk_written_bytes_total|node_filesystem_avail_bytes|node_filesystem_files|node_filesystem_files_free|node_filesystem_readonly|node_filesystem_size_bytes|node_load1|node_load15|node_load5|node_memory_compressed_bytes|node_memory_internal_bytes|node_memory_purgeable_bytes|node_memory_swap_total_bytes|node_memory_swap_used_bytes|node_memory_total_bytes|node_memory_wired_bytes|node_network_receive_bytes_total|node_network_receive_drop_total|node_network_receive_errs_total|node_network_receive_packets_total|node_network_transmit_bytes_total|node_network_transmit_drop_total|node_network_transmit_errs_total|node_network_transmit_packets_total|node_os_info|node_textfile_scrape_error|node_uname_info
-      source_labels:
-      - __name__
+      regex:
+    ...
 ```
 
-7.  Leaving the file open in the editor, now copy to the clipboard the code example under the **Logs** section header.  You'll need to confirm the `your-instance-name` text was again replaced with your information, such as:
+7.  Leaving the file open in the editor, now copy to the clipboard the code example under the **Logs** section header.  You'll need to confirm the `your-instance-name` text was again replaced with your information, (myhostname) such as:
 
 ```    - job_name: integrations/node_exporter_direct_scrape
       static_configs:
@@ -117,22 +116,7 @@ When this lab has been completed, you'll have:
       pipeline_stages:
       - multiline:
           firstline: '^([\w]{3} )?[\w]{3} +[\d]+ [\d]+:[\d]+:[\d]+|[\w]{4}-[\w]{2}-[\w]{2} [\w]{2}:[\w]{2}:[\w]{2}(?:[+-][\w]{2})?'
-      - regex:
-          expression: '(?P<timestamp>([\w]{3} )?[\w]{3} +[\d]+ [\d]+:[\d]+:[\d]+|[\w]{4}-[\w]{2}-[\w]{2} [\w]{2}:[\w]{2}:[\w]{2}(?:[+-][\w]{2})?) (?P<hostname>\S+) (?P<sender>.+?)\[(?P<pid>\d+)\]:? (?P<message>(?s:.*))$'
-      - labels:
-          sender:
-          hostname:
-          pid:
-      - match:
-          selector: '{sender!="", pid!=""}'
-          stages:
-            - template:
-                source: message
-                template: '{{ .sender }}[{{ .pid }}]: {{ .message }}'
-            - labeldrop:
-                - pid
-            - output:
-                source: message
+ ...
 ```
 
 8.  Now find the section that is named `logs.configs.scrape_configs` and paste the log configuration into the configuration file.
