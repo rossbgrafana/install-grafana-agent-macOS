@@ -143,4 +143,12 @@ When this lab has been completed, you'll have:
 
 1.  Lastly, you can now click on the **View Dashboards** button to see a list of the pre-configured dashboards you just installed and start exploring your system's metrics.
 
+You'll see something similar to this:
+
+![List of macOS integration dashboards](./images/macos-int-dashboards.png)
+
 2.  Additionally, you can click on the **View alerts and recording rules** button to access those features.
+
+You'll see something similar to this:
+
+![List of macOS integration rules](./images/macos-int-alerts.png)
